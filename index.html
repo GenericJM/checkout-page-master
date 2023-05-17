@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/cf149fe0d1.js" crossorigin="anonymous"></script>
+ 
+
+   <title>Document</title>
+
+</head>
+
+<body>
+
+  <main class="main">
+    <form action="" class="flex__form">
+      <h2>Contact Information</h2>
+      <label for="email">Email</label>
+      <div class="inputbox">
+        <i></i>
+        <input class="textbox" id="email" type="email" placeholder="Enter Your Email" required></input>
+      </div>
+      <label for="phone">Phone</label>
+      <div class="inputbox">
+        <!-- to do add icon -->
+        <i></i>
+        <input class="textbox" id="Phone" type="number" placeholder="Enter Your Phone" required></input>
+      </div>
+      <h2>Shipping address</h2>
+      <label for="name">Full name</label>
+      <div class="inputbox">
+        <!-- to do add icon -->
+        <i></i>
+        <input class="textbox" id="name" type="text" placeholder="Enter Your name" required></input>
+      </div>
+      <label for="address">Address</label>
+      <div class="inputbox">
+        <!-- to do add icon -->
+        <i></i>
+        <input class="textbox" id="address" type="text" placeholder="Enter Your Address" required></input>
+      </div>
+      <label for="city">Your City</label>
+      <div class="inputbox">
+        <!-- to do add icon -->
+        <i></i>
+        <input class="textbox" id="city" type="text" placeholder="Enter Your City" required></input>
+      </div>
+      <label for="country">Country </label>
+      <div class="inputbox">
+        <!-- to do add icon -->
+        <i></i>
+        <Select class="textbox" id="country" required>
+          <option value="">Your country</option>
+          <option value="0">Mexico</option>
+          <option value="1">Brazil</option>
+          <option value="2">Venezuela</option>
+        </Select>
+      </div>
+      <label for="postalcode">Postal code</label>
+      <div class="inputbox">
+        <!-- todo add icon -->
+        <i></i>
+        <input class="textbox" id="postalcode" type="number" placeholder="Enter Your Postal Code" required></input>
+      </div>
+      <input type="checkbox" name="" id="checkbox">
+      <label for="checkbox">Save this information for next time</label>
+      <button>Continue</button>
+    </form>
+
+    <div class="container">
+      <section class="products">
+        <article class="product">
+          <div class="product__image">
+            <img src="/photo1.png" class="image"></img>
+          </div>
+          <div class="product__info">
+            <header class="product__info-header">
+              <h3 class="product__text">Vintage Backbag</h3>
+              <div class="product__price"><h3 class="product__price product__price-discount">$54.99</h3> <h4 class="product__price product__price-original">$94.99</h3></div>
+            </header>
+            <div class="product__counter">
+             
+              <button class="counter__button"><i class="fa-regular fa-solid fa-minus" style="color: #808080;"></i></button>
+              <h1>0</h1>
+              <button class="counter__button"><i class="fa-regular fa-plus fa-lg" style="color: #808080;"></i></button>
+            </div>
+          </div>
+        </article>     
+      </section>
+    </div>
+  </main>
+
+</body>
+
+</html>
