@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="styles.css">
-
+  <script src='decimal.js'></script>
   <script src="https://kit.fontawesome.com/cf149fe0d1.js" crossorigin="anonymous"></script>
-
+  <link rel="shortcut icon" href="devchallenges.png">
 
   <title>Checkout Page</title>
 
@@ -23,68 +24,81 @@
   </header>
   <main class="main">
     <form action="" class="flex__form">
-      <h2>Contact Information</h2>
-      <label for="email">Email</label>
+      <h2 class="flex__form-element">Contact Information</h2>
+      <label class="flex__form-element" for="email">Email</label>
       <div class="inputbox">
         <span class="material-symbols-outlined">
           mail
-          </span>
+        </span>
         <input class="textbox" id="email" type="email" placeholder="Enter Your Email" autocomplete="none"
           required></input>
       </div>
-      <label for="phone">Phone</label>
+      <label class="flex__form-element" for="phone">Phone</label>
       <div class="inputbox">
         <span class="material-symbols-outlined">
           call
-          </span>
+        </span>
         <input class="textbox" id="Phone" type="number" placeholder="Enter Your Phone" autocomplete="none"
           required></input>
       </div>
 
-      <h2>Shipping address</h2>
-      <label for="name">Full name</label>
+      <h2 class="flex__form-element flex__form-divisor">Shipping address</h2>
+      <label class="flex__form-element" for="name">Full name</label>
       <div class="inputbox">
         <span class="material-symbols-outlined">
           account_circle
-          </span>
-        <input class="textbox" id="name" type="text" placeholder="Enter Your name" required></input>
+        </span>
+        <input class="textbox" id="name" type="text" placeholder="Your name" required></input>
       </div>
-      <label for="address">Address</label>
+      <label class="flex__form-element" for="address">Address</label>
       <div class="inputbox">
         <span class="material-symbols-outlined">
           home
-          </span>
-        <input class="textbox" id="address" type="text" placeholder="Enter Your Address" required></input>
+        </span>
+        <input class="textbox" id="address" type="text" placeholder="Your Address" required></input>
       </div>
-      <label for="city">Your City</label>
+      <label class="flex__form-element" for="city">Your City</label>
       <div class="inputbox">
         <span class="material-symbols-outlined">
           location_city
         </span>
-        <input class="textbox" id="city" type="text" placeholder="Enter Your City" required></input>
+        <input class="textbox" id="city" type="text" placeholder="Your City" required></input>
       </div>
-      <label for="country">Country </label>
-      <div class="inputbox">
-        <span class="material-symbols-outlined">
-          location_city
-        </span>
-        <Select class="textbox" id="country" required>
-          <option value="">Your country</option>
-          <option value="0">Mexico</option>
-          <option value="1">Brazil</option>
-          <option value="2">Venezuela</option>
-        </Select>
+      <section class="main__localdata">
+        <div>
+          <label class="flex__form-element" for="country">Country </label>
+          <div class="inputbox">
+            <span class="material-symbols-outlined">
+              location_city
+            </span>
+            <Select class="textbox" id="country" required>
+              <option value="">Your country</option>
+              <option value="0">Mexico</option>
+              <option value="1">Brazil</option>
+              <option value="2">Venezuela</option>
+            </Select>
+          </div>
+        </div>
+        <div>
+          <label class="flex__form-element" for="postalcode">Postal code</label>
+          <div class="inputbox">
+            <span class="material-symbols-outlined">
+              markunread_mailbox
+            </span>
+            <input class="textbox" id="postalcode" type="number" placeholder="Your Postal Code" required></input>
+          </div>
+        </div>
+
+      </section>
+
+      <label class="flex__form-element" for="checkbox">
+        <input class="flex__form-checkbox" type="checkbox" name="" id="checkbox">
+        Save this information for next time
+      </label>
+      <div class="flex__form-boxbuttom">
+        <button class="flex__form-element flex__form-button">Continue</button>
+
       </div>
-      <label for="postalcode">Postal code</label>
-      <div class="inputbox">
-        <span class="material-symbols-outlined">
-          markunread_mailbox
-        </span>
-        <input class="textbox" id="postalcode" type="number" placeholder="Enter Your Postal Code" required></input>
-      </div>
-      <input type="checkbox" name="" id="checkbox">
-      <label for="checkbox">Save this information for next time</label>
-      <button>Continue</button>
     </form>
 
     <div class="container">
@@ -98,22 +112,58 @@
               <h3 class="product__text">Vintage Backbag</h3>
               <div class="product__price">
                 <h3 class="product__price product__price-discount">$54.99</h3>
-                <h4 class="product__price product__price-original">$94.99</h3>
+                <h6 class="product__price product__price-original">$94.99</h6>
               </div>
             </header>
             <div class="product__counter">
 
-              <button class="counter__button"><i class="fa-regular fa-solid fa-minus"
+              <button class="product__text counter__button"><i class="fa-regular fa-solid fa-minus"
                   style="color: #808080;"></i></button>
-              <h1>0</h1>
-              <button class="counter__button"><i class="fa-regular fa-plus fa-lg" style="color: #808080;"></i></button>
+              <h1 class="product__text product__amount">0</h1>
+              <button class="product__text counter__button"><i class="fa-regular fa-plus fa-lg" style="color: #808080;"></i></button>
             </div>
           </div>
         </article>
+        <article class="product">
+          <div class="product__image">
+            <img src="/photo2.png" class="image"></img>
+          </div>
+          <div class="product__info">
+            <header class="product__info-header">
+              <h3 class="product__text">Levi Shoes</h3>
+              <div class="product__price">
+                <h3 class="product__price product__price-discount">$74.99</h3>
+                <h6 class="product__price product__price-original">$124.99</h6>
+              </div>
+            </header>
+            <div class="product__counter">
+
+              <button class="product__text counter__button"><i class="fa-regular fa-solid fa-minus"
+                  style="color: #808080;"></i></button>
+              <h1 class="product__text product__amount">0</h1>
+              <button class="product__text counter__button"><i class="fa-regular fa-plus fa-lg" style="color: #808080;"></i></button>
+            </div>
+          </div>
+        </article>
+        <section class="total">
+          <hr> 
+          <div class="total__element">
+          <h2>Shipping</h2>
+          <h2 class="shipping__value">$19</h2>
+          </div>
+          <hr>
+          <div class="total__element">
+            <h2>Total</h2>
+            <h2 class="total__amount"></h2>
+            
+          </div> 
+
+        </section>
       </section>
+     
     </div>
   </main>
-
+<script src="index.js"></script>
 </body>
-
+<footer class="footer">Created By Juan Marcano - devChallenges.io</footer>
 </html>
